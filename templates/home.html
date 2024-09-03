@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Weather Data Api</title>
+    <title id="Title">Weather Data Api</title>
     <style>
-
+        *{
+           background-color: #F5F5F5;
+        }
         #Format{
+           background-color: #E6E6FA;
            font-weight: 900;
         }
 
@@ -17,11 +20,21 @@
 </head>
 <body>
 <h1>Weather Data Api</h1>
-<ul>
+<ol>
     <li>
-        <p id="Format">URL format: http://127.0.0.1:5000/api/v1/station/date</p>
+        <p id="Format">URL format for one station and a specific date.: http://127.0.0.1:5000/api/v1/station/date</p>
         <p id="Example">URL example: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
     </li>
+    <li>
+        <p id="Format">URL format for one station and every date: http://127.0.0.1:5000/api/v1/station</p>
+        <p id="Example">URL example: http://127.0.0.1:5000/api/v1/10</p>
+    </li>
+    <li>
+        <p id="Format">URL format for one station for a year: http://127.0.0.1:5000/api/v1/yearly/station/date</p>
+        <p id="Example">URL example: http://127.0.0.1:5000/api/v1/yearly/10/1988</p>
+    </li>
+</ol>
+<ul>
     <li>
         <p id="Staid">Pick the station(STAID) you want to learn weather information for: </p>
         <p>{{data|safe}}</p>
